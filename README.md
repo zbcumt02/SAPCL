@@ -1,5 +1,5 @@
 # SAPCL
-Structure-augmented contrastive graph neural network for stance classification
+Structure-augmented contrastive graph neural network for stance classification - aaai2026(17189)
 
 # TLDR
 Stance classification faces challenges due to noisy labels from complex semantics, complicating LLM training. The proposed SAPCL designs a semantic augmented graph contrastive learning framework to generate accurate stance labels from PLL.
