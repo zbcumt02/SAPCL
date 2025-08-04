@@ -23,7 +23,7 @@ class SAPCL(nn.Module):
         # create the queue
         self.register_buffer("queue", torch.randn(args.moco_queue, args.low_dim)) #缓冲区存储特征表示：8192*128
         self.register_buffer("queue_pseudo", torch.randn(args.moco_queue)) #缓冲区存储伪目标：8192
-        self.register_buffer("queue_ptr", torch.zeros(1, dtype=torch.long)) #缓冲区初始化为0，队列的指针位置，用于跟踪队列中下一个插入位置
+        self.register_buffer("queue_ptr", torch.zeros(1, dtype=torch.long)) #缓冲区初始化为0，队列指针位置，用于跟踪队列中下一个插入位置
         self.register_buffer("prototypes", torch.zeros(args.num_class,args.low_dim)) #缓冲区初始化为0，存储每类别原型特征：100*128
         self.queue = F.normalize(self.queue, dim=0)
 
